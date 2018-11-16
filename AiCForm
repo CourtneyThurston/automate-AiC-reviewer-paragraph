@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="en"  >
+
+
+    <body>
+
+    (A) Applicant achievement is rare and impressive. <input type="checkbox" id="checkbox1" value='Applicant achievement is rare and impressive.' />
+    <br>
+    (B) Applicant achievement is above average. <input type="checkbox" id="checkbox2" value='Applicant achievement is above average.' />
+    <br>
+    (C) Applicant achievement is average. <input type="checkbox" id="checkbox3" value='Applicant achievement is average.' />
+    <br>
+    <br>
+    (A) Applicant aspirations are detailed and compelling. <input type="checkbox" id="checkbox4" value='Applicant aspirations are detailed and compelling.' />
+    <br>
+    (B) Applicant aspirations are convincing but not sufficiently detailed. <input type="checkbox" id="checkbox5" value='Applicant aspirations are convincing but not sufficiently detailed.' />
+    <br>
+    (C) Applicant aspirations are not particularly convincing, or the student is not planning to pursue computing in the future. <input type="checkbox" id="checkbox6" value='Applicant aspirations are not particularly convincing, or the student is not planning to pursue computing in the future.' />
+    <br>
+    <br>
+    (A) The applicant has one or more advantages including a parent in tech, an elite secondary education, etc. <input type="checkbox" id="checkbox7" value='The applicant has one or more advantages including a parent in tech, an elite secondary education, etc; this should be considered in the context of achievement, as applicants with plentiful resources may well be expected to achieve at higher levels than applicants withou' />
+    <br>
+    (B) There is no evidence that the applicant has overcome hardship. <input type="checkbox" id="checkbox8" value='There is no evidence that the applicant has overcome hardship; this should be considered in the context of achievement, as applicants with plentiful resources may well be expected to achieve at higher levels than applicants without.' />
+    <br>
+    (C) There is evidence that the applicant has overcome some hardship. <input type="checkbox" id="checkbox9" value='There is evidence that the applicant has overcome some hardship; this should be considered in the context of achievement, as applicants with plentiful resources may well be expected to achieve at higher levels than applicants without.' />
+    <br>
+    (D) There is evidence that the applicant has overcome significant hardship. <input type="checkbox" id="checkbox10" value='There is evidence that the applicant has overcome significant hardship; this should be considered in the context of achievement, as applicants with plentiful resources may well be expected to achieve at higher levels than applicants without.' />
+    <br>
+    <br>
+    (A) Essays are of appropriate length and detail. <input type="checkbox" id="checkbox11" value='Essays are of appropriate length and detail (please consider in the context of advantages or lack thereof, commented on above).' />
+    <br>
+    (B) Essays could be longer or more detailed. <input type="checkbox" id="checkbox12" value='Essays could be longer or more detailed. (please consider in the context of advantages or lack thereof, commented on above).' />
+    <br>
+    (C) The essays are especially short or insufficiently detailed. <input type="checkbox" id="checkbox13" value='The essays are especially short or insufficiently detailed (please consider in the context of advantages or lack thereof, commented on above).' />
+    <br>
+    (D) Essays were severely lacking in effort or left blank. <input type="checkbox" id="checkbox14" value='Essays were severely lacking in effort or left blank.' />
+    <br>
+    <br>
+    (A) OVERALL RECOMMENDATION: National Award winner consideration. <input type="checkbox" id="checkbox15" value='OVERALL RECOMMENDATION: National Award winner consideration.' />
+    <br>
+    (B) OVERALL RECOMMENDATION: National honorable mention consideration. <input type="checkbox" id="checkbox16" value='OVERALL RECOMMENDATION: National honorable mention consideration.' />
+    <br>
+    (C) OVERALL RECOMMENDATION: Affiliate award consideration. <input type="checkbox" id="checkbox17" value='OVERALL RECOMMENDATION: Affiliate award consideration.' />
+    <br>
+    (D) OVERALL RECOMMENDATION: Affiliate honorable mention consideration. <input type="checkbox" id="checkbox18" value='OVERALL RECOMMENDATION: Affiliate honorable mention consideration.' />
+    <br>
+    (E) OVERALL RECOMMENDATION: No application effort - therefore no recognition is recommended. <input type="checkbox" id="checkbox19" value='OVERALL RECOMMENDATION: No application effort - therefore no recognition is recommended.' />
+    <br>
+    <br>
+    <br>
+
+    <font size=2><table border=0 cellspacing=0 cellpadding=0 width=100%><tr>
+    <td width='40%' valign='center' align='right'>"Provide Final Comments/Thoughts On This Application": </td>
+    <td align='center' width=5%></td>
+    <td align='left'>&nbsp;
+    <td align='left'>
+
+            <textarea id='remarks' rows='10' cols='50'></textarea>     
+    </td>
+    </tr>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+
+            $("[type=checkbox]").change(function() {
+
+                var msg = "";
+
+                $('input:checked').each(function(i,v){
+                    msg += $(v).val() + "\n";
+                });
+
+
+                $("#remarks").val(msg);   
+             });
+    });
+    </script>
+
+    </body>
+    </html>
